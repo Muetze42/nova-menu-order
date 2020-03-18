@@ -6,7 +6,8 @@
         "nova",
         "menu",
         "order",
-        "sort"
+        "sort",
+        "resource"
     ],
     "license": "MIT",
     "authors": [

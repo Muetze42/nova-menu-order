@@ -1,4 +1,4 @@
-With this package it is possible to sort the resources and resource groups.
+Sort the Nova resources and resource groups in the menu.
 
 Install:  
 `composer require normanhuth/nova-menu-order`
