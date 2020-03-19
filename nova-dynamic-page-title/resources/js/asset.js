@@ -33,8 +33,8 @@ Nova.booting((Vue, router, store) => {
 
         if(resourceMeta != null)
         {
-            let LabelInit = resourceMeta.label.split("<\/span>");
-            let pluralLabel = LabelInit[1];
+            let LabelInit   = resourceMeta.label.split("<\/span>");
+            let pluralLabel = LabelInit[1]!== undefined ? LabelInit[1]: resourceMeta.label;
 
             if(to.name == "index")
                 label = pluralLabel
