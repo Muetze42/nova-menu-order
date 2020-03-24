@@ -9,8 +9,22 @@ use Laravel\Nova\Resource;
 abstract class CustomResource extends Resource
 {
     public static $order         = '';
-    public static $label         = '';
-    public static $singularLabel = '';
+
+    /**
+     * @return null
+     */
+    public static function SetLabel()
+    {
+        return null;
+    }
+
+    /**
+     * @return null
+     */
+    public static function SetSingularLabel()
+    {
+        return null;
+    }
 
     /**
      * Get the displayable label of the resource.
@@ -21,9 +35,10 @@ abstract class CustomResource extends Resource
     {
         $order = static::$order ? static::$order:9999;
 
-        if(static::$label) {
-            return '<span class="hidden">'.$order.'</span>'.htmlspecialchars(static::$label);
+        if (static::SetLabel()) {
+            return '<span class="hidden">'.$order.'</span>'.htmlspecialchars(static::SetLabel());
         }
+
         return '<span class="hidden">'.$order.'</span>'.htmlspecialchars(Str::plural(Str::title(Str::snake(class_basename(get_called_class()), ' '))));
     }
 
@@ -39,8 +54,8 @@ abstract class CustomResource extends Resource
 
     public static function singularLabel()
     {
-        if(static::$singularLabel) {
-            return preg_replace('/(<span.*\/span>)/u', '', static::$singularLabel);
+        if (static::SetSingularLabel()) {
+            return preg_replace('/(<span.*\/span>)/u', '', static::SetSingularLabel());
         }
         return preg_replace('/(<span.*\/span>)/u', '', Str::singular(static::label()));
     }

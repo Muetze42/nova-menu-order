@@ -40,9 +40,19 @@ use NormanHuth\NovaMenuOrder\Nova\CustomResource;
 class Contact extends CustomResource
 {
     public static $order = 20;
-    public static $label         = 'Contacts'; // Optional
-    public static $singularLabel = 'Contact';  // Optional
 ```
 
+
+Localize Labels - use alternative method
+```php
+    public static function SetLabel()
+    {
+        return __('Contact');
+    }
+    public static function SetSingularLabel()
+    {
+        return __('Contact');
+    }
+```
 ___
 If You use [klepak/nova-dynamic-page-title](https://github.com/klepak/nova-dynamic-page-title), You find in the folder nova-dynamic-page-title a custom JS-asset to override, change, edit this package. 
