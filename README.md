@@ -40,6 +40,8 @@ use NormanHuth\NovaMenuOrder\Nova\CustomResource;
 class Contact extends CustomResource
 {
     public static $order = 20;
+    public static $label         = 'Contacts'; // Optional
+    public static $singularLabel = 'Contact';  // Optional
 ```
 
 ___
