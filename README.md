@@ -45,11 +45,11 @@ class Contact extends CustomResource
 
 Localize Labels - use alternative method
 ```php
-    public static function SetLabel()
+    public static function setLabel()
     {
         return __('Contact');
     }
-    public static function SetSingularLabel()
+    public static function setSingularLabel()
     {
         return __('Contact');
     }
