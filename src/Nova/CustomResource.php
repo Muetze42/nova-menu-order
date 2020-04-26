@@ -13,7 +13,7 @@ abstract class CustomResource extends Resource
     /**
      * @return null
      */
-    public static function SetLabel()
+    public static function setLabel()
     {
         return null;
     }
@@ -21,7 +21,7 @@ abstract class CustomResource extends Resource
     /**
      * @return null
      */
-    public static function SetSingularLabel()
+    public static function setSingularLabel()
     {
         return null;
     }
