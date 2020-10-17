@@ -1,3 +1,5 @@
+New alternative Method: https://gist.github.com/jbrooksuk/c7c1ab6ea094a29d7dbb1fbdb17d05e1
+
 Sort the Nova resources and resource groups in the menu.
 
 Install:  
